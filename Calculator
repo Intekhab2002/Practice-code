@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    <script>
+        let firstNum, secondNum, answer;
+        function condition() {
+             if (firstNum === '') {
+                alert("Please input first field value");
+                return false;
+            }
+            if (secondNum === '') {
+                alert("Please input second field value");
+                return false;
+            }
+        }
+       
+
+        function add() {
+            firstNum = document.getElementById('fnum').value;
+            secondNum = document.getElementById('snum').value;
+            condition();
+            answer = Number(firstNum) + Number(secondNum);
+            document.getElementById('result').innerHTML = `The answer is : ${answer} `;
+        }
+
+        function substract() {
+            firstNum = document.getElementById('fnum').value;
+            secondNum = document.getElementById('snum').value;
+            condition();
+            answer = Number(firstNum) - Number(secondNum);
+            document.getElementById('result').innerHTML = `The answer is : ${answer} `;
+        }
+
+        function divide() {
+            firstNum = document.getElementById('fnum').value;
+            secondNum = document.getElementById('snum').value;
+            condition();
+            answer = Number(firstNum) / Number(secondNum);
+            document.getElementById('result').innerHTML = `The answer is : ${answer} `;
+        }
+        function multiply() {
+            firstNum = document.getElementById('fnum').value;
+            secondNum = document.getElementById('snum').value;
+            condition();
+            answer = Number(firstNum) * Number(secondNum);
+            document.getElementById('result').innerHTML = `The answer is : ${answer} `;
+        }
+
+
+
+    </script>
+
+    <span>First Number : </span>
+    <input type="number" id="fnum">
+    <span>Second Number : </span>
+    <input type="number" id="snum">
+
+    <div>
+        <input type="button" value="Add" onclick="add()">
+        <input type="button" value="Substract" onclick="substract()">
+        <input type="button" value="Divide" onclick="divide()">
+        <input type="button" value="Multiply" onclick="multiply()">
+    </div>
+    <p id="result"> </p>
+
+
+    <style>
+        div {
+            margin-left: 163px;
+            margin-top: 39px;
+        }
+    </style>
+
+</body>
+
+</html>
